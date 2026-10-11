@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
+keyword = "python"
+
 url = "https://realpython.github.io/fake-jobs/"
 response = requests.get(url)
 soup = BeautifulSoup(response.text, "html.parser")
@@ -26,7 +28,7 @@ with open("jobs.csv", "w", newline="", encoding="utf-8-sig") as file:
     writer.writerow(["Title", "Company", "Location", "Link"])
 
     for title, company, location, apply_link in zip(titles, companies, locations, apply_links):
-            if "python" in title.text.lower():
+            if keyword in title.text.lower():
                 writer.writerow([
                     title.text.strip(),
                     company.text.strip(),
@@ -35,3 +37,4 @@ with open("jobs.csv", "w", newline="", encoding="utf-8-sig") as file:
             ])
 
 
+print(len(titles))
