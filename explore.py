@@ -22,6 +22,10 @@ plt.show()
 df.to_csv("jobs_with_region.csv", index=False, encoding="utf-8-sig")
 df["Region"].value_counts().to_csv("region_counts.csv", encoding="utf-8-sig")
 
+print(df.groupby("Region")["Company"].nunique())
+
+print(df["Company"].value_counts().head(3))
+
 # print(df.head())
 # print(df.shape)
 # print(df.columns)
