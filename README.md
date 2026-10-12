@@ -34,3 +34,8 @@ python jobs.py
 
 - Close `jobs.csv` in Excel before running the script, or you will get a `PermissionError`.
 - The file is saved with `utf-8-sig` encoding so Excel shows special characters correctly.
+
+## Analysis
+
+1. Run `jobs.py` first. It creates `jobs.csv`.
+2. Then run `explore.py`. It reads `jobs.csv`, groups the listings by region, counts them, and shows the most common job titles.
