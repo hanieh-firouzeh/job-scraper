@@ -17,6 +17,7 @@ print(df["Title"].value_counts().head(5))
 
 df["Region"].value_counts().plot(kind="bar")
 plt.title("Listings per region")
+plt.savefig("regions.png")
 plt.show()
 
 df.to_csv("jobs_with_region.csv", index=False, encoding="utf-8-sig")
