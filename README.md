@@ -39,3 +39,7 @@ python jobs.py
 
 1. Run `jobs.py` first. It creates `jobs.csv`.
 2. Then run `explore.py`. It reads `jobs.csv`, groups the listings by region, counts them, and shows the most common job titles.
+
+## Results
+
+![Listings per region](regions.png)
